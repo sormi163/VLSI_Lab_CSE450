@@ -1,6 +1,6 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+ 
 entity cpu_tb is
 end cpu_tb;
 
@@ -22,8 +22,7 @@ begin
             Z => Z,
             PC_out => PC_out
         );
-
-    clk_process : process
+	 clk_process : process
     begin
         CLK <= '0';
         wait for CLK_PERIOD/2;
@@ -37,9 +36,8 @@ begin
         wait for CLK_PERIOD;
         
         RESET <= '0';
-        wait for 10 * CLK_PERIOD;
+        wait for 7 * CLK_PERIOD;
 
         wait;
     end process;
-
 end Behavioral;
